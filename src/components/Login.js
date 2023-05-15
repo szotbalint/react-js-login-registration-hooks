@@ -48,8 +48,8 @@ const Login = () => {
     if (checkBtn.current.context._errors.length === 0) {
       AuthService.login(username, password).then(
         () => {
-          navigate("/profile");
-          window.location.reload();
+         navigate("/profile");
+          window.location.reload(); 
         },
         (error) => {
           const resMessage =
@@ -79,11 +79,11 @@ const Login = () => {
 
         <Form onSubmit={handleLogin} ref={form}>
           <div className="form-group">
-            <label htmlFor="username">Username</label>
+            <label htmlFor="email">Username</label>
             <Input
               type="text"
               className="form-control"
-              name="username"
+              name="email"
               value={username}
               onChange={onChangeUsername}
               validations={[required]}
